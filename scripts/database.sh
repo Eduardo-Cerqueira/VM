@@ -12,8 +12,5 @@ systemctl start postgresql
 # Fetch Demeter Postgresql init script
 curl -O https://raw.githubusercontent.com/Eduardo-Cerqueira/demeter/staging/init.sql
 
-# Switch to user postgres
-su postgres
-
 # Execute the init script
-psql -c '\i ./init.sql'
+su postgres -c "psql -U postgres -c '\i ./init.sql'"
