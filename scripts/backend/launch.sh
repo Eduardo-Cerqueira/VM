@@ -1,4 +1,4 @@
-# Get the roject back-end
+# Get the project back-end
 
 git clone https://github.com/Eduardo-Cerqueira/demeter.git
 
