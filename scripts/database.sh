@@ -18,7 +18,7 @@ su postgres -c "psql -U postgres -c '\i /tmp/init.sql'"
 # Get postgresql version
 postgres_version="$(su postgres -c 'ls ~/')"
 
-echo listen_addresses = '192.168.56.102' >> "/etc/postgresql/$postgres_version/main/postgresql.conf"
+echo listen_addresses = '*' >> "/etc/postgresql/$postgres_version/main/postgresql.conf"
 
 echo host    demeter     	app     192.168.56.102/24       md5 >> "/etc/postgresql/$postgres_version/main/pg_hba.conf"
 
