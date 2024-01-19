@@ -3,17 +3,14 @@
 
 # Install dependencies
 apt-get update
-apt-get install postgresql curl acl
+apt-get install postgresql curl acl -y
 
 # Enable Postgresql service
 systemctl enable postgresql
 systemctl start postgresql
 
 # Fetch Demeter Postgresql init script
-curl -O https://raw.githubusercontent.com/Eduardo-Cerqueira/demeter/staging/init.sql
-
-# Switch to user postgres
-su postgres
+curl "https://raw.githubusercontent.com/Eduardo-Cerqueira/demeter/staging/init.sql" > /tmp/init.sql
 
 # Execute the init script
-psql -c '\i ./init.sql'
+su postgres -c "psql -U postgres -c '\i /tmp/init.sql'"
