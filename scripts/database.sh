@@ -12,8 +12,14 @@ systemctl start postgresql
 # Fetch Demeter Postgresql init script
 curl "https://raw.githubusercontent.com/Eduardo-Cerqueira/demeter/staging/init.sql" > /tmp/init.sql
 
+# Fetch Demeter Postgresql schema script
+curl "https://raw.githubusercontent.com/Eduardo-Cerqueira/demeter/staging/schema/schema.sql" >/tmp/schema.sql
+
 # Execute the init script
 su postgres -c "psql -U postgres -c '\i /tmp/init.sql'"
+
+# Execute the schema script
+su postgres -c "psql -U postgres -d demeter -c '\i /tmp/schema.sql'"
 
 # Get postgresql version
 postgres_version="$(su postgres -c 'ls ~/')"
