@@ -21,5 +21,8 @@ sysctl -p
 
 iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
 
+# Save iptables config
+iptables-save > /etc/iptables/rules.v4
+
 # Restart network
 systemctl restart networking
