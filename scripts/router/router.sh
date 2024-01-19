@@ -2,7 +2,7 @@
 ## ⚠️ Script should be launched as "root" using su (sudo not required)
 
 # Copy interfaces example
-cp interfaces.example > /etc/network/interfaces
+cp interfaces.example /etc/network/interfaces
 
 # Set automatic iptables ipv4 save at install (remove interaction)
 debconf-set-selections <<EOF
