@@ -10,7 +10,7 @@ npm i -g pm2
 git clone https://github.com/ValzM/VM-Demeter-Frontend.git
 
 # Install app dependencies
-cd vitesse
+cd VM-Demeter-Frontend
 npm install
 
 # Build app
