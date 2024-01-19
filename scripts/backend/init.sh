@@ -9,7 +9,7 @@ apt-get install libpq-dev -y
 apt-get install wget -y
 apt-get install git -y
 
-apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+apt-get install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev -y wget libbz2-dev
 
 
 # Install python 3.10.13
